@@ -75,6 +75,12 @@ const skills = [
     level: 60,
     category: 'Database'
   },
+  {
+    name: 'postgreSQL',
+    description: "I have expertise in PostgreSQL, with proficiency in writing and optimizing complex queries, managing databases efficiently, and ensuring data integrity.",
+    level: 60,
+    category: 'Database'
+  },
   { 
     name: 'TypeScript', 
   

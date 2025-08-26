@@ -245,7 +245,9 @@ const App = () => {
 
       {/* Projects */}
 
-      <Projects />
+      <div className="relative z-20">
+        <Projects />
+      </div>
 
       {/* Contact */}
 
