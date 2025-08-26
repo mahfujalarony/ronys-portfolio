@@ -186,8 +186,8 @@
 }
 .btn-g .br {
   position: relative;
-  height: 5rem;
-  width: 17.5rem;
+  height: clamp(3rem, 8vw, 5rem); /* ছোট ডিভাইসে ছোট হবে */
+  width: clamp(10rem, 40vw, 17.5rem); /* মোবাইলে auto adjust হবে */
   border-radius: 60px;
   background: linear-gradient(
     109.6deg,
@@ -195,40 +195,43 @@
     rgb(72, 124, 255) 91.1%
   );
   padding: 2px;
-  margin: 10px;
+  margin: 0.5rem;
   transition: all 0.4s;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
 }
+
 .btn-g .br a {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
+  gap: 0.5rem;
   height: 100%;
   width: 100%;
-  font-size: 1.7rem;
+  font-size: clamp(1rem, 4vw, 1.3rem); /* মোবাইল → ছোট, ডেস্কটপ → বড় */
   background: #242d44;
   border-radius: 40px;
   color: #ecf0f4;
   text-decoration: none;
+  white-space: nowrap; /* লাইন ব্রেক হবে না */
 }
-.btn-g .br a span {
-  padding-left: 3px;
-}
+
 .btn-g .br a .fa-solid {
+  font-size: clamp(1rem, 4vw, 1.3rem);
   position: relative;
-  top: -2px;
-  font-size: 1.8rem;
+  top: -1px;
 }
+
 .btn-g .br:hover {
   box-shadow: -7px -8px 55px rgba(255, 54, 141, 0.3),
     -2px -2px 20px rgba(255, 54, 141, 0.5),
-    -4px -4px 10px rgba(255, 54, 141, 0.6), 8px 8px 55px rgba(72, 124, 255, 0.3),
-    2px 2px 20px rgba(72, 124, 255, 0.5), 4px 4px 10px rgba(72, 124, 255, 0.6);
+    -4px -4px 10px rgba(255, 54, 141, 0.6),
+    8px 8px 55px rgba(72, 124, 255, 0.3),
+    2px 2px 20px rgba(72, 124, 255, 0.5),
+    4px 4px 10px rgba(72, 124, 255, 0.6);
 }
+
 
 
 
@@ -309,4 +312,74 @@
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background-color: rgba(168, 85, 247, 0.8);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.timeline {
+  position: relative;
+  margin: 50px auto;
+  padding-left: 150px; /* space for date */
+  max-width: 700px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 120px;
+  width: 2px;
+  height: 100%;
+  background: #2dd4bf; /* line color */
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.timeline-date {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #1e293b;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.timeline-date::after {
+  content: "";
+  position: absolute;
+  right: -32px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  background: #2dd4bf;
+  border: 3px solid #0f172a;
+  border-radius: 50%;
+}
+
+.timeline-content {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+.timeline-content h3 {
+  color: #22c55e;
+  margin-bottom: 5px;
 }

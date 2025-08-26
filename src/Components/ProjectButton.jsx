@@ -69,6 +69,28 @@ const StyledWrapper = styled.div`
     border-radius: 3px;
     height: 100%;
   }
+
+  /* 🔹 Responsive styles */
+  @media (max-width: 768px) {
+    .codepen-button span {
+      padding: 0.8rem 1.2rem;
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .codepen-button span {
+      padding: 0.6rem 1rem;
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 360px) {
+    .codepen-button span {
+      padding: 0.5rem 0.8rem;
+      font-size: 0.8rem;
+    }
+  }
 `;
 
 export default Button;

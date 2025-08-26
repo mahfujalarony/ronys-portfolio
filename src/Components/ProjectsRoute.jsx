@@ -15,7 +15,7 @@ const ProjectsRoute = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-600">
+    <div className="min-h-screen bg-gray-700">
            <nav className="flex justify-around items-center py-4 shadow-sm">
               <div className="mt-5 hover:scale-95 transition duration-300 cursor-pointer flex items-center gap-2">
                   <img
