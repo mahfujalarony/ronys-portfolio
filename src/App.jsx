@@ -132,7 +132,7 @@ const App = () => {
               <a 
                 className="clink flex items-center gap-2"  
                 rel="noopener noreferrer"
-                href="https://drive.google.com/file/d/142xaY2mVgLMoqJ_vWQeX3Vg9H4xk4aW4/view?usp=sharing"
+                href="https://drive.google.com/file/d/1pd8uT9N0mn12mf42g5IJXGLMxg7h-ZAc/view?usp=sharing"
               >
                 <i className="fa-solid fa-file" />
                 <span className="text-lg md:text-xl">My Resume</span>
