@@ -87,6 +87,18 @@
     live: "https://restorent-beryl.vercel.app/",
     github: "https://github.com/mahfujalarony/Restorent",
   },
-  ];
+    {
+    num: "07",
+    category: "Mern Stack",
+    title: "Real Time Chat Using Firebase DB",
+    alt: "Project 8",
+    description:
+      "I built a chat application using React.js. For backend authentication, I used Firebase Authentication, and for the database, I used Firebase Realtime Database",
+    stack: [{ name: "React.js" }, { name: "Tailwind CSS" }, { name: "Firebase" }],
+    image: "/projects/g.png",
+    live: "https://visionary-selkie-f724e7.netlify.app/",
+    github: "https://github.com/mahfujalarony/Chat-Using-Firebase-Realtime-DB-React-",
+  },
 
+  ];
   export default projects;

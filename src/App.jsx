@@ -9,6 +9,7 @@ import '@fontsource/michroma';
 import skills from './data/Skill';
 import Projects from './Components/Projects';
 
+
 const App = () => {
 
 
@@ -106,33 +107,42 @@ const App = () => {
         </nav>
 
         <main className="container mx-auto px-4 py-12 text-center">  
-          <h1 className="text-2xl sm:text-3xl md:text-4xl  font-bold mb-3 sm:mb-4 md:mt-8 lg:mt-10 font-raleway text-center md:text-left">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl  font-bold mb-3 sm:mb-4 md:mt-8 lg:mt-10 font-raleway text-center">
             <span className="bg-gradient-to-r from-[#38bdf8] via-[#818cf8] to-[#f472b6] bg-clip-text text-transparent leading-snug">
               Mahfuj Alam Rony
             </span>
           </h1>
 
-          <p className="text-base sm:text-lg md:text-2xl  mt-3 sm:mt-6 font-raleway text-gray-100 leading-relaxed text-center md:text-left">
-            I am a <span className="font-bold">frontend developer</span>, and I also have{" "}
-            <span className="font-bold">backend skills</span>.
+          <p className="text-base sm:text-lg md:text-2xl mt-3 sm:mt-6 font-raleway text-gray-100 leading-relaxed text-center">
+            Hello, I am a <span className="italic text-sky-400">Full Stack Developer</span>.
           </p>
+
+          <p className="text-base sm:text-lg md:text-2xl mt-2 font-raleway text-gray-100 leading-relaxed text-center">
+            I have experience with{" "}
+            <span className="italic text-indigo-400">React/Next.js</span>,{" "}
+            <span className="italic text-emerald-400">Node.js</span>,{" "}
+            <span className="italic text-purple-400">PostgreSQL</span>, and{" "}
+            <span className="italic text-pink-400">MongoDB</span>.
+          </p>
+
 
 
           <div className="btn-g mt-10 flex gap-4 justify-center">
             <span className="br">
               <a
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=mahfujalamrony07@gmail.com&su=from portfolio"
-                rel="noopener noreferrer"
+                href="mailto:mahfujalamrony07@gmail.com?subject=From Portfolio"
+                className="clink flex items-center gap-2"
               >
                 <i className="fa-solid fa-envelope" />
                 <span className="text-lg lg:text-xl">Contact Me</span>
               </a>
             </span>
+
             <span className="br">
               <a 
                 className="clink flex items-center gap-2"  
                 rel="noopener noreferrer"
-                href="https://drive.google.com/file/d/1pd8uT9N0mn12mf42g5IJXGLMxg7h-ZAc/view?usp=sharing"
+                href="https://drive.google.com/file/d/15ul3EEEGJfWgzPMgc9DYmcedlOzp2ysg/view?usp=drive_link"
               >
                 <i className="fa-solid fa-file" />
                 <span className="text-lg md:text-xl">My Resume</span>
@@ -171,21 +181,27 @@ const App = () => {
             </h1>
 
             <p className="text-gray-300 font-montserrat text-base sm:text-lg md:text-xl leading-relaxed hover:scale-102 transition-transform duration-300">
-              Hello! I&apos;m a passionate frontend developer currently pursuing Computer Science & Technology at Kishoregonj Polytechnic Institute.
+              Hello! I&apos;m a passionate <span className="italic text-sky-400">Full Stack Developer</span> currently pursuing 
+              Computer Science &amp; Technology at Kishoregonj Polytechnic Institute.
             </p>
 
             <p className="text-gray-300 font-montserrat text-base sm:text-lg md:text-xl leading-relaxed hover:scale-102 transition-transform duration-300">
-              I specialize in building modern, high-performance web applications using React.js and state management tools like Redux Toolkit and React Query.
+              I build modern, scalable web applications using <span className="italic text-indigo-400">React.js</span>, 
+              <span className="italic text-purple-400"> Next.js</span>, and efficient state management tools.
             </p>
 
             <p className="text-gray-300 font-montserrat text-base sm:text-lg md:text-xl leading-relaxed hover:scale-102 transition-transform duration-300">
-              I love creating interactive UIs with Tailwind CSS, Material UI, and Framer Motion. I also know backend development using Node.js, Express.js, and MongoDB.
+              On the backend, I work with <span className="italic text-emerald-400">Node.js</span>, 
+              <span className="italic text-green-400"> Express.js</span>, 
+              <span className="italic text-pink-400"> MongoDB</span>, and 
+              <span className="italic text-yellow-400"> PostgreSQL</span> to build secure and efficient APIs.
             </p>
 
             <p className="text-gray-300 font-montserrat text-base sm:text-lg md:text-xl leading-relaxed hover:scale-102 transition-transform duration-300">
-              My goal is to create seamless user experiences with clean, efficient code while continuously learning new technologies.
+              My goal is to create end-to-end solutions with clean architecture, smooth user experience, and continuous learning of new technologies.
             </p>
           </div>
+
         </div>
       </section>
 
@@ -198,9 +214,6 @@ const App = () => {
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
               My Skills
             </h1>
-            <p className="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
-              Crafting digital experiences with modern technologies and creative problem-solving
-            </p>
           </div>
 
         
@@ -249,28 +262,43 @@ const App = () => {
         <Projects />
       </div>
 
+      
+
       {/* Contact */}
 
       <div className="min-h-[50vh] flex flex-col items-center justify-center text-white p-4 bg-gray-800">
         <div className="flex flex-wrap justify-center gap-8 max-w-3xl">
-          {contacts.map((contact, index) => (
-            <a
-              key={index}
-              href={contact.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`group flex flex-col items-center p-6 rounded-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-lg ${contact.bg} z-10`}
-            >
-              <div className="mb-2">
-                {React.cloneElement(contact.icon, {
-                  className: `text-white group-hover:text-gray-300 text-2xl transition-colors duration-300`
-                })}
-              </div>
-              <span className="text-lg font-medium text-white group-hover:text-gray-300 transition-colors duration-300">{contact.name}</span>
-            </a>
-          ))}
+          {contacts.map((contact, index) => {
+            const gradientBg = {
+              GitHub: "bg-gradient-to-r from-gray-700 via-gray-900 to-black",
+              LinkedIn: "bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700",
+              LeetCode: "bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400",
+              Facebook: "bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600",
+              Email: "bg-gradient-to-r from-red-500 via-red-600 to-pink-500",
+            };
+
+            return (
+              <a
+                key={index}
+                href={contact.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`group flex flex-col items-center p-6 rounded-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-lg ${gradientBg[contact.name]} z-10`}
+              >
+                <div className="mb-2">
+                  {React.cloneElement(contact.icon, {
+                    className: `text-white group-hover:text-gray-300 text-2xl transition-colors duration-300`
+                  })}
+                </div>
+                <span className="text-lg font-medium text-white group-hover:text-gray-300 transition-colors duration-300">
+                  {contact.name}
+                </span>
+              </a>
+            );
+          })}
         </div>
       </div>
+
     </div>
   )
 }
