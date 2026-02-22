@@ -4,7 +4,7 @@ This is my personal portfolio website, built with **React + Vite**.
 The UI is styled with **Tailwind CSS**, animated with **Framer Motion**, and fully responsive across devices.
 
 ##  Live Preview
-https://ronys-portfolio.vercel.app/
+[https://www.mahfujalamrony.me/](https://www.mahfujalamrony.me/)
 
 ##  Features
 - Fast dev & build with **Vite**
@@ -18,5 +18,11 @@ https://ronys-portfolio.vercel.app/
 - Tailwind CSS
 - Framer Motion
 
+
+
+
+
+
+https://github.com/user-attachments/assets/3ebd4e5d-7107-46a9-9670-0ef44d2b2727
 
 
