@@ -1,4 +1,23 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --grid-line: rgba(15, 23, 42, 0.09);
+  --grid-glow: rgba(59, 130, 246, 0.45);
+  --wave-opacity-1: 0.18;
+  --wave-opacity-2: 0.28;
+  --wave-opacity-3: 0.12;
+  --wave-opacity-4: 0.08;
+}
+
+.dark {
+  --grid-line: rgba(255, 255, 255, 0.1);
+  --grid-glow: rgba(255, 255, 255, 0.85);
+  --wave-opacity-1: 0.6;
+  --wave-opacity-2: 1;
+  --wave-opacity-3: 0.4;
+  --wave-opacity-4: 0.3;
+}
 
 
 
@@ -19,7 +38,7 @@
   height: 100%;
   top: 0;
   left: 50%;
-  background: #ffffff1a;
+  background: var(--grid-line);
   overflow: hidden;
   mask: linear-gradient(black, Transparent);
   -webkit-mask: linear-gradient(black, Transparent);
@@ -35,8 +54,8 @@
   background: linear-gradient(
     to bottom,
     rgba(255, 255, 255, 0) 0%,
-    #ffffff 75%,
-    #ffffff 100%
+    var(--grid-glow) 75%,
+    var(--grid-glow) 100%
   );
   animation: drop 7s 0s infinite;
   animation-fill-mode: forwards;
@@ -138,22 +157,22 @@
 
 .wave .w-1 {
   animation: wave1 4s linear infinite;
-  opacity: 0.6;
+  opacity: var(--wave-opacity-1);
 }
 
 .wave .w-2 {
   animation: wave1 3s linear infinite;
-  opacity: 1;
+  opacity: var(--wave-opacity-2);
 }
 
 .wave .w-3 {
   animation: wave2 5s linear infinite;
-  opacity: 0.4;
+  opacity: var(--wave-opacity-3);
 }
 
 .wave .w-4 {
   animation: wave2 2s linear infinite;
-  opacity: 0.3;
+  opacity: var(--wave-opacity-4);
 }
 
 @keyframes wave1 {

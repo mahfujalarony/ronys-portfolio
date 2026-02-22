@@ -47,6 +47,18 @@ const skills = [
     level: 75,
     category: 'Frontend'
   },
+  {
+    name: 'Ant Design',
+    description: "I can build dashboards and admin interfaces using Ant Design components, forms, tables, and layout system.",
+    level: 70,
+    category: 'Frontend'
+  },
+  {
+    name: 'shadcn/ui',
+    description: "I can use shadcn/ui components with Tailwind and customize them to match project design needs.",
+    level: 70,
+    category: 'Frontend'
+  },
   { 
     name: 'Framer Motion', 
 
@@ -68,10 +80,28 @@ const skills = [
     level: 55,
     category: 'Backend'
   },
+  {
+    name: 'Socket.IO',
+    description: "I can build real-time features like chat, notifications, and live updates using Socket.IO.",
+    level: 60,
+    category: 'Backend'
+  },
   { 
     name: 'MongoDB', 
 
     description: "I have experience using MongoDB as a NoSQL database, including data modeling and CRUD operations.", 
+    level: 60,
+    category: 'Database'
+  },
+  {
+    name: 'Mongoose',
+    description: "I use Mongoose for schema design, validation, models, and querying MongoDB efficiently in Node.js apps.",
+    level: 65,
+    category: 'Database'
+  },
+  {
+    name: 'Prisma',
+    description: "I can use Prisma ORM for schema modeling, migrations, and type-safe database queries in full-stack apps.",
     level: 60,
     category: 'Database'
   },
